@@ -1,4 +1,3 @@
- 	
 
 	<!DOCTYPE html>
 <html>
@@ -14,8 +13,8 @@
     background-size: cover;
     background-position: centre;
     font-family: sans-serif;
-    
-    
+
+
 }
         .signupbox{
     width: 260px;
@@ -32,7 +31,7 @@
 
 }
 .avatar{
-    width:100px; 
+    width:100px;
     height:100px;
     border-radius: 50%;
     position: absolute;
@@ -46,7 +45,7 @@
     font-weight: italic;
 }
 .signupbox input{
-    width: 200px;
+    width: 205px;
     margin-bottom: 10px;
 }
 
@@ -217,7 +216,7 @@ body {
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
-   
+
 
 </head>
 
@@ -238,8 +237,8 @@ body {
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="home.html">Home</a></li>
                     <!-- <li><a href="Admin.html">Admin</a></li> -->
-                    
-                   
+
+
                     <!-- <li><a href="log_in.php">Log In</a></li>
                     <li><a href="signup.php">Sign Up</a></li> -->
                 </ul>
@@ -260,12 +259,12 @@ body {
 	<form action="log.php" method="post">
 		 <p>UserName</p>
         <input type="text" name="first_name" placeholder="UserName" required="">
-		
+
 		<p>Password</p>
         <!-- <input type="password" name="password" placeholder=" Password" required=""> -->
         <input type="password" id="psw" name="password" placeholder=" Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-		
-	    
+
+
 		<!-- <p>User Type</p>
         <input type="text" name="user_type" placeholder="User type"required=""> -->
 		<br>
@@ -291,8 +290,8 @@ body {
         <div class="container">
             <div class="row featurette">
                 <div class="col-md-7">
-    
-    
+
+
 </body>
 </head>
 </html>
