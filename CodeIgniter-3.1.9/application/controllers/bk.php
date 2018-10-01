@@ -1,7 +1,7 @@
 <?php
+defined('BASEPATH') OR exit('No direct script access allowed');
 
-
-class Users extends CI_Controller {
+class bk extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,8 +20,17 @@ class Users extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('signup.php');
-		$this->load->model('UserModel');
-		$this->model_name->method();
+		$this->load->view('booking');
+		$this->load->model('book');
+	}
+	public function book(){
+		$data = array(
+			'firstname'=>$this->input->post('firstname'),
+			'idno'=>$this->input->post('idno'),
+			'phone'=>$this->input->post('firstname'),
+			'address'=>$this->input->post('address'),
+			'date'=>$this->input->post('date'),
+		);
+		$result = $this->book->book($data);
 	}
 }
