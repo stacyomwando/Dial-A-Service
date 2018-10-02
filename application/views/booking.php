@@ -155,7 +155,7 @@ span.price {
      <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action=" bk.php" method="post" accept-charset="utf-8" id="cust">
+      <form action="" method="post" accept-charset="utf-8" id="cust">
       
         <div class="row">
           <div class="col-50">
