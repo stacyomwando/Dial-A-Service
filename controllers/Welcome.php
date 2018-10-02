@@ -20,10 +20,6 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-<<<<<<< HEAD
-		$this->load->view('booking.php');
-=======
 		$this->load->view('welcome_message');
->>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
 	}
 }

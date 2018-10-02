@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class bk extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -20,10 +20,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-<<<<<<< HEAD
-		$this->load->view('booking.php');
-=======
-		$this->load->view('welcome_message');
->>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
+		$this->load->view('booking');
+		$this->load->model('book');
+	}
+	public function book(){
+		$data = array(
+			'firstname'=>$this->input->post('firstname'),
+			'idno'=>$this->input->post('idno'),
+			'phone'=>$this->input->post('firstname'),
+			'address'=>$this->input->post('address'),
+			'date'=>$this->input->post('date'),
+		);
+		$result = $this->book->book($data);
 	}
 }
