@@ -1,146 +1,3 @@
-<?php
-//Include the connection file
-  require_once 'connection.php';
-
-  //Define variables and initialize them with empty variables
-  $firstname = $lastname = $idno = $phone = $address = $date = "";
-  $firstname_err = $lastname_err = $idno_err = $phone_err = $address_err = $date_err = "";
-   // $userType="Customer";
-  //Process form data when the form is submitted
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //Validate firstname
-    if (empty(trim($_POST["firstname"]))) {
-      $firstname_err = "Please enter firstname";
-    }else{
-      $firstname = trim($_POST["firstname"]);
-    }
-
-    //Validate lastname
-    if (empty(trim($_POST["lastname"]))) {
-      $lastname_err = "Please enter lastname";
-    }else{
-      $lastname = trim($_POST["lastname"]);
-    }
-    //Validate idno
-    if (empty(trim($_POST["idno"]))) {
-      $idno_err = "Please enter ID Number";
-    }else{
-      $idno = trim($_POST["idno"]);
-    }
-   
-    //Validate phone number
-    if (empty(trim($_POST["phone"]))) {
-      $phone_err = "Please enter your phone number";
-    }else{
-      //Prepare a select statement
-      $sql = "SELECT userid FROM customer WHERE phone=?";
-      if ($stmt = $mysqli->prepare($sql)) {
-        # Bind variables to the prepared statement as parameters
-        $stmt->bind_param("s",$param_phone);
-
-        #Set parameters
-        $param_phone = trim($_POST["phone"]);
-
-        #Attempt to excecute the prepared statement
-        if ($stmt->execute()) {
-          # Store result
-          $stmt ->store_result();
-
-          if ($stmt->num_rows==1) {
-            $phone_err = "This phone number has already been taken";
-          }else{
-            $phone = trim($_POST["phone"]);
-          }
-        }else{
-          echo "Ooops:( Something went wrong";
-        }
-      }
-      #Close statement
-      $stmt->close();
-    }
-    //Validate email
-    if (empty(trim($_POST["address"]))) {
-      $address_err = "Please enter your address";
-    }else{
-      $address = trim($_POST["address"]);
-    }
-    //Validate category
-    if (empty(trim($_POST["date"]))) {
-      $date_err = "Please select a date";
-    }else{
-      $date = trim($_POST["date"]);
-    }
-
-    // #Validate house number
-    // if (empty(trim($_POST["username"]))) {
-    //   $housenumber_err = "Please enter your house number";
-    // }else{
-    //   //Prepare a select statement
-    //   $sql = "SELECT user_id FROM users WHERE username=?";
-    //   if ($stmt = $mysqli->prepare($sql)) {
-    //     # Bind variables to the prepared statement as parameters
-    //     $stmt->bind_param("s",$param_housenumber);
-
-    //     #Set parameters
-    //     $param_housenumber = trim($_POST["username"]);
-
-    //     #Attempt to excecute the prepared statement
-    //     if ($stmt->execute()) {
-    //       # Store result
-    //       $stmt ->store_result();
-
-    //       if ($stmt->num_rows==1) {
-    //         $username_err = "This username has already been taken";
-    //       }else{
-    //         $username = trim($_POST["username"]);
-    //       }
-    //     }else{
-    //       echo "Ooops:( Something went wrong";
-    //     }
-    //   }
-    //   #Close statement
-    //   $stmt->close();
-    // }
-    // #Validate password
-    // if (empty(trim($_POST["password"]))) {
-    //   $password_err = "Please enter your password";
-    // }else{
-    //   $password = trim($_POST["password"]);
-    // }
-
-    #Check for input errors before entering in the database
-    if (empty($firstname_err) && empty($lastname_err) && empty($idno_err) && empty($phone_err) && empty($address_err) && empty($date_err)) {
-      //Prepare an insert statement
-      $sql = "INSERT into booking(firstname,lastname,idno,phone,address,date) VALUES(?, ?, ?, ?, ?, ?)";
-
-      if ($stmt = $mysqli->prepare($sql)) {
-        # Bind variables to the prepared statement as parameters
-        $stmt->bind_param("ssssss",$param_firstname,$param_lastname,$param_idno,$param_phone,$param_address,$param_date);
-        #Set the parameters
-        $param_firstname = $firstname;
-        $param_lastname = $lastname;
-        $param_idno = $idno;
-        $param_phone = $phone;
-        $param_address = $address;
-        $param_date = $date;
-        
-        #Attempt to execute the prepared statement
-        if ($stmt->execute()){
-          #Redirect to login page
-          header("location: login.php");
-        }else{
-          echo "Something went wrong:( Please try again later";
-        }
-        #Close statement
-      $stmt->close();
-      }
-      
-    }
-    #Close connection
-    $mysqli->close();
-  }
-?>
 
 <!DOCTYPE html>
 <html>
@@ -298,44 +155,48 @@ span.price {
      <div class="row">
   <div class="col-75">
     <div class="container">
-      <form action="" method="post" accept-charset="utf-8" id="cust">
+      <form action=" bk.php" method="post" accept-charset="utf-8" id="cust">
       
         <div class="row">
           <div class="col-50">
            <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputName4">Firstname</label>
-      <input type="text" class="form-control" id="Firstname" name = "firstname" placeholder="John">
+      <label for="inputName4">Fi rstname</label>
+      <input type="text" class="form-control" id="firstname" name = "firstname" placeholder="John">
     </div>
-    <div class="form-group col-md-6">
+    <!-- <div class="form-group col-md-6">
       <label for="inputName4">Lastname</label>
       <input type="text" class="form-control" id="Lastname" name="lastname" placeholder="Doe">
     </div>
-  </div>
-  <div class="form-row">
+  </div> -->
+  <!-- div class="form-row"> -->
   <div class="form-group col-md-6">
     <label for="inputID">ID Number</label>
-    <input type="text" class="form-control" id="ID" name = "idno" placeholder="34458763">
-  </div>
-   <div class="form-group col-md-6">
-    <label for="inputPhone">Phone</label>
-    <input type="text" class="form-control" id="Phone" name ="phone" placeholder="0712345678">
+    <input type="text" class="form-control" id="idno" name = "idno" placeholder="34458763">
   </div>
 </div>
-<div class="form-row">
+<div class="row">
+   <div class="form-group col-md-6">
+    <label for="inputPhone">Phone</label>
+    <input type="text" class="form-control" id="phone" name ="phone" placeholder="0712345678">
+  <!-- </div> -->
+</div>
+
   <div class="form-group col-md-6">
     <label for="inputDate">Date</label>
-    <input type="date" class="form-control" id="Date" name = "date" placeholder="2018/09/28">
+    <input type="date" class="form-control" id="date" name = "date" placeholder="2018/09/28">
   </div>
+</div>
+<div class="row">
   <div class="form-group col-md-4">
       <label for="inputState">County</label>
-      <select id="County" name ="county" class="form-control">
+      <select id="county" name ="county" class="form-control">
         <option selected name ="county">Nairobi</option>
         <!-- <option>...</option> -->
       </select>
-    </div>
+    
 </div>
-  <div class="form-row">
+  
     <div class="form-group col-md-6">
       <label for="inputConstituency">Address</label>
       <input type="text" class="form-control" id="address" name ="address" placeholder=" Oyster A8 Donholm Road, Embakasi East">
