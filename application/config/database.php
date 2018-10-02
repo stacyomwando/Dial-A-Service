@@ -76,15 +76,12 @@ $query_builder = TRUE;
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-<<<<<<< HEAD
 	'username' => 'root',
 	'password' => '',
 	'database' => 'dial a service',
-=======
 	'username' => '',
 	'password' => '',
 	'database' => '',
->>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
