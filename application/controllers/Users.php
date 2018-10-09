@@ -21,5 +21,7 @@ class Users extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('signup.php');
+		$this->load->model('UserModel');
+		// $this->UserModel->form_insert($data);
 	}
 }

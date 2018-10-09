@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+ 	
+=======
+>>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
 
 	<!DOCTYPE html>
 <html>
@@ -13,8 +17,13 @@
     background-size: cover;
     background-position: centre;
     font-family: sans-serif;
+<<<<<<< HEAD
+    
+    
+=======
 
 
+>>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
 }
         .signupbox{
     width: 260px;
@@ -31,7 +40,11 @@
 
 }
 .avatar{
+<<<<<<< HEAD
+    width:100px; 
+=======
     width:100px;
+>>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
     height:100px;
     border-radius: 50%;
     position: absolute;
@@ -45,7 +58,11 @@
     font-weight: italic;
 }
 .signupbox input{
+<<<<<<< HEAD
+    width: 200px;
+=======
     width: 205px;
+>>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
     margin-bottom: 10px;
 }
 
@@ -216,7 +233,11 @@ body {
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
+<<<<<<< HEAD
+   
+=======
 
+>>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
 
 </head>
 
@@ -237,8 +258,13 @@ body {
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="home.html">Home</a></li>
                     <!-- <li><a href="Admin.html">Admin</a></li> -->
+<<<<<<< HEAD
+                    
+                   
+=======
 
 
+>>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
                     <!-- <li><a href="log_in.php">Log In</a></li>
                     <li><a href="signup.php">Sign Up</a></li> -->
                 </ul>
@@ -259,12 +285,21 @@ body {
 	<form action="log.php" method="post">
 		 <p>UserName</p>
         <input type="text" name="first_name" placeholder="UserName" required="">
+<<<<<<< HEAD
+		
+		<p>Password</p>
+        <!-- <input type="password" name="password" placeholder=" Password" required=""> -->
+        <input type="password" id="psw" name="password" placeholder=" Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+		
+	    
+=======
 
 		<p>Password</p>
         <!-- <input type="password" name="password" placeholder=" Password" required=""> -->
         <input type="password" id="psw" name="password" placeholder=" Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
 
 
+>>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
 		<!-- <p>User Type</p>
         <input type="text" name="user_type" placeholder="User type"required=""> -->
 		<br>
@@ -290,8 +325,16 @@ body {
         <div class="container">
             <div class="row featurette">
                 <div class="col-md-7">
+<<<<<<< HEAD
+    
+    
+</body>
+</head>
+</html>
+=======
 
 
 </body>
 </head>
 </html>
+>>>>>>> 5706dad9a295f34a814fd42a786795277317dff0
