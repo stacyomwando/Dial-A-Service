@@ -52,5 +52,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['default_controller'] = 'Workers';
 $route['default_controller'] = 'login';
+$route['default_controller'] = 'Employee_controller';
+$route['default_controller'] = 'Customer_controller';
+$route['default_controller'] = 'Booking_controller';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+$route['employee'] = "Employee_controller"; 
+$route['employee/add_view'] = 'Employee_controller/add_employee_view'; 
+$route['employee/edit/(\d+)'] = 'Employee_controller/update_employee_view/$1'; 
+$route['employee/delete/(\d+)'] = 'Employee_controller/delete_employee/$1';
+
+$route['customer'] = "Customer_controller"; 
+$route['customer/add_view'] = 'Customer_controller/add_customer_view'; 
+$route['customer/edit/(\d+)'] = 'Customer_controller/update_customer_view/$1'; 
+$route['customer/delete/(\d+)'] = 'Customer_controller/delete_customer/$1';
+
+$route['booking'] = "Booking_controller"; 
+$route['booking/add_view'] = 'Booking_controller/add_booking_view'; 
+$route['booking/edit/(\d+)'] = 'Booking_controller/update_booking_view/$1'; 
+$route['booking/delete/(\d+)'] = 'Booking_controller/delete_booking/$1';
+
