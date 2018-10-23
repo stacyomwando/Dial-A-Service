@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css" rel="stylesheet" type="text/css">
     <style type="text/css">
-         
+
 * {
     margin: 0;
     padding: 0;
@@ -331,7 +331,7 @@ footer h3 {
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="home.html">Home</a></li>
-                   
+
                     <!-- <li><a href="log_in.php">Log In</a></li>
                     <li><a href="signup.php">Sign Up</a></li> -->
                 </ul>
@@ -343,7 +343,7 @@ footer h3 {
 
     <!-- Header Section End -->
     <!-- About Me Section Start -->
-    
+
     <!-- About Me Section End -->
     <!-- My Portfolio Section Start -->
     <div id="portfolio">
@@ -407,7 +407,7 @@ footer h3 {
             <div>
                 <h3>find us on:</h3>
                 <ul id="contact">
-                  
+
                     <li><a class="button social" href="https://twitter.com/ch3ll0h" target="_blank"><i class="fa fa-fw fa-twitter"></i></a></li>
                     <li><a class="button social" href="https://www.facebook.com/pageofphotography/" target="_blank"><i class="fa fa-facebook-official"></i></a></li>
                 </ul>
